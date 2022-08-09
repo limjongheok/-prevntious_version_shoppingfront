@@ -38,7 +38,7 @@ export const call = (api, method, request) => {
         console.log(error.response)
         console.log(error.response.status)
         let errorresponse = error.response.status;
-        if(errorresponse === 400){
+        if(errorresponse === 400 || errorresponse === 406){
           console.log(1)
           alert("이미 계정이 존재합니다")
           
